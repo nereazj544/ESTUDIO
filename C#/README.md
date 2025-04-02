@@ -130,5 +130,119 @@ dotnet add package NombreDelPaquete
 
 <aside>
 Es importante ejecutar estos comandos en el directorio donde deseas crear tu proyecto o dentro del directorio del proyecto para comandos específicos.
-
 </aside>
+
+<br>
+<br>
+<p align="center">
+<img height="90px" width="100%" src="https://i.pinimg.com/736x/00/2c/8d/002c8df471e0d94688cb63e0c6324e44.jpg" >
+</p>
+<br>
+<br>
+
+# Objetivo 1: Variables y constantes
+
+## Variable
+
+Las variables son datos que necesitas almacenar y utilizar en los programas y que residen en la memoria del oredanor. Tienen las siguientes características:
+- **Nombre**: identificador dentro del codigo fuente que ultilizamos para usarlas.
+- **Tipo**: tipo de dato que almacena la variable (numero, entero, cadena de texto, etc)
+- **Valor**: valor que almacenan.
+
+## Tipos de Variables Básicos
+
+- **int:** Números enteros (ejemplo: -5, 0, 42)
+- **double:** Números decimales de punto flotante (ejemplo: 3.14, -0.001)
+- **float:** Números decimales de precisión simple (ejemplo: 3.14f)
+- **bool:** Valores booleanos (true/false)
+- **char:** Caracteres individuales (ejemplo: 'A', '1', '$')
+- **string:** Cadenas de texto (ejemplo: "Hola Mundo")
+
+## Declaración de Variables
+
+```
+// Declaración simple
+int edad = 25;
+string nombre = "Juan";
+bool esActivo = true;
+
+// Declaración múltiple
+int x = 1, y = 2, z = 3;
+
+// Declaración implícita
+var mensaje = "Hola"; // El compilador infiere que es string
+
+```
+
+## Constantes
+
+```
+const double PI = 3.14159;
+const string MENSAJE = "Este valor no puede cambiar";
+
+```
+
+Las constantes son valores que se establecen durante la compilación y no pueden ser modificados durante la ejecución del programa.
+
+## Características Principales
+
+- **Inmutabilidad:** Una vez declaradas, su valor no puede cambiar
+- **Asignación única:** Deben ser inicializadas en el momento de su declaración
+- **Tiempo de compilación:** El valor debe ser conocido en tiempo de compilación
+
+## Ejemplos de Uso
+
+```
+// Constantes numéricas
+const int MAXIMO_INTENTOS = 3;
+const double GRAVEDAD = 9.81;
+
+// Constantes de texto
+const string MENSAJE_ERROR = "Error en la operación";
+
+// Constantes en una clase
+public class Configuracion
+{
+    const int TIEMPO_ESPERA = 1000;
+    const string VERSION = "1.0.0";
+}
+
+```
+
+## Cuándo Usar Constantes
+
+- **Valores matemáticos:** Como π, conversiones de unidades, etc.
+- **Configuración:** Valores que no deben cambiar en toda la aplicación
+- **Mensajes:** Textos predefinidos que se usan en múltiples lugares
+- **Límites:** Valores máximos o mínimos establecidos
+
+<aside>
+A diferencia de las variables readonly, las constantes deben tener un valor conocido en tiempo de compilación y son siempre estáticas (static) implícitamente.
+</aside>
+
+## Tipos Nullable
+
+Permiten que las variables contengan un valor null además de su tipo de dato normal:
+
+```
+int? numeroNullable = null;
+string? textoNullable = null;
+
+```
+
+## Variables de Referencia vs Valor
+
+- **Tipos de valor:** int, double, bool, char, struct
+- **Tipos de referencia:** string, class, interface, delegate, array
+
+<aside>
+Es importante recordar que las variables deben ser inicializadas antes de ser utilizadas y que C# es un lenguaje de tipado fuerte, lo que significa que una vez que se declara una variable de un tipo, no puede cambiar su tipo.
+</aside>
+
+<br>
+<br>
+<p align="center">
+<img height="90px" width="100%" src="https://i.pinimg.com/736x/00/2c/8d/002c8df471e0d94688cb63e0c6324e44.jpg" >
+</p>
+<br>
+<br>
