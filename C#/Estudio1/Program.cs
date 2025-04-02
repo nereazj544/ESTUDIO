@@ -295,6 +295,94 @@ Console.WriteLine(a[2]);
 Console.WriteLine(a[3]);
 
 
+int[] nums = { 5, 10, 15, 20, 25, 30 }; //! los arrays con los numero es el corchete antes del nombre de la variable
+Console.WriteLine("NUMEROS: " + nums[0] + ","
++ nums[1] + ","
++ nums[2] + ","
++ nums[3] + ","
++ nums[4] + ","
++ nums[5]);
+
+nums[1] = 13;
+nums[4] = nums[5] - 9;
+Console.WriteLine("Num elementos: " + nums.Length);
+
+Array.Sort(nums);
+
+Console.WriteLine("Ordenados " + nums[0] + ","
++ nums[1] + ","
++ nums[2] + ","
++ nums[3] + ","
++ nums[4] + ","
++ nums[5]);
+
+Console.WriteLine("¿existe el elemento 80? " + Array.IndexOf(a, 80));
+Console.WriteLine("¿existe el elemento 10? " + Array.IndexOf(a, 13));
+
+
+// TODO FASE 1: Lista
+
+List<string> personajes = new List<string>(); //? forma uno
+List<string> per2 = new List<string> { "Raian", "Aiden", "Will" };
+List<int> listEnt = new List<int> { 1, 2, 3, 4, 5 }; //? forma dos
+
+//? Agregar elementos
+personajes.Add("Kaito");
+listEnt.Add(28);
+personajes.Insert(1, "Akira");
+personajes.Insert(2, "Bill");
+
+Console.WriteLine("Contenido de la lista: Personajes: " +
+personajes[0] + ","
++ personajes[1] + ","
++ personajes[2] + ","
++ " Cantidad: " + personajes.Count);
+
+Console.WriteLine("Contenido de la lista: Personajes 2: " +
+per2[0] + ","
++ per2[1] + ","
++ per2[2] + ","
++ " Cantidad: " + per2.Count);
+
+//? Remover elementos
+listEnt.Remove(3); //! borra el elemento selecionado
+listEnt.RemoveAt(0); //! borra la posicion (en este caso el primer elemento)
+per2.Clear(); //! Borra todo
+
+// ? Verificar
+bool vf = personajes.Contains("Bill");
+Console.WriteLine("¿existe el elemento \"Bill\"? " + vf);
+
+//? Cnaridad
+int cant = listEnt.Count;
+int cant2 = per2.Count;
+Console.WriteLine("¿cantidad? " + cant);
+Console.WriteLine("¿cantidad? " + cant2);
+
+// TODO LISTA DENTRO DE OTRA LISTA
+List<List<int>> ints = new List<List<int>> {new List<int>{1,2,3}, new List<int>{34, 78, 78}};
+Console.WriteLine("n de elementos? " + ints.Count);
+
+Console.WriteLine("n de elementos?(primera lista) " + ints[0].Count);
+
+Console.WriteLine("elementos(primera lista) " 
++ ints[0][0] + ","
++ ints[0][1] + ","
++ ints[0][2] + ","
+);
+
+Console.WriteLine("elementos(primera lista) " 
++ ints[1][0] + ","
++ ints[1][1] + ","
++ ints[1][2] + ","
+);
+
+
+
+//TODO FASE 1: Diccionarios
+
+
+
 
 
 
