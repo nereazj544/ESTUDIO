@@ -31,7 +31,7 @@ C# (pronunciado "C Sharp") es un lenguaje de programación moderno, orientado a 
 
 ## Ejemplo Básico
 
-```
+```csharp
 using System;
 
 class Program
@@ -160,7 +160,7 @@ Las variables son datos que necesitas almacenar y utilizar en los programas y qu
 
 ## Declaración de Variables
 
-```
+```csharp
 // Declaración simple
 int edad = 25;
 string nombre = "Juan";
@@ -176,7 +176,7 @@ var mensaje = "Hola"; // El compilador infiere que es string
 
 ## Constantes
 
-```
+```csharp
 const double PI = 3.14159;
 const string MENSAJE = "Este valor no puede cambiar";
 
@@ -192,7 +192,7 @@ Las constantes son valores que se establecen durante la compilación y no pueden
 
 ## Ejemplos de Uso
 
-```
+```csharp
 // Constantes numéricas
 const int MAXIMO_INTENTOS = 3;
 const double GRAVEDAD = 9.81;
@@ -224,7 +224,7 @@ A diferencia de las variables readonly, las constantes deben tener un valor cono
 
 Permiten que las variables contengan un valor null además de su tipo de dato normal:
 
-```
+```csharp
 int? numeroNullable = null;
 string? textoNullable = null;
 
@@ -271,7 +271,7 @@ Console.Write(escrito);
 El comando *Writeline* es utilizado para escribir mensajes por pantalla en la consola introducciendo un salto al final del mismo. 
 La forma de utilizarlo es la siguiente:
 
-```
+```csharp
 Console.WriteLine(escrito);
 ```
  Componentes:
@@ -284,7 +284,7 @@ Console.WriteLine(escrito);
 El comando *ReadLine* es utilizado para leer mensajes escritos por los usuarios de las aplicaciones a traves de la consola.
 La forma de utilizarlo es la siguiente:
 
-```
+```csharp
 CadenaLeida = Console.ReadLine();
 ```
 
@@ -303,7 +303,7 @@ Componentes:
 
 ## FASE 1: Mostrar informacion por pantalla
 El primer ejercicio de la base de la fase consiste en comprobar qué la utilización de *WriteLine* sé diferencias de *Write* en que añade un salto de línea al final del mensaje al ejecutar la sentencia.
-```
+```csharp
 // TODO Fase 1: Mostrar informacion por pantalla | Ej. 1
 Console.Write("Hola, ¿que haces? ¿como estas? ¿como tas?");
 Console.WriteLine(); //! Este puede ir vacio (o no) ⤴️ no puede ir vacio 
@@ -316,7 +316,7 @@ Se ha introducido una sentencia *ReadLine* al final del código fuente esto lo h
 
 El segundo ejercicio de la fase consiste en aprender a añadir texto promeniente de variables a los mensajes que se muestran y cómo utilizar caracteres especiales dentro de los usajes que se muestran.
 
-```
+```csharp
 // TODO Fase 1: Mostrar informacion por pantalla | Ej. 2
 Console.WriteLine("Hola mi alias es: " + nombre);
 Console.WriteLine("Hola mi alias es: {0}\n", nombre); //! Este es muy similar a cuando se formatea el mensaje en java
@@ -352,7 +352,7 @@ Se ha introducido el carácter **\n** Que añade un salto de linea a la cadena.
 La segunda fase del objetivo consiste en leer información introducida por los usuarios de las aplicaciones en el teclado. <br>
 La sentencia para leer información a través del teclado es *ReadLine* todo lo que se introduzca mediante teclado será almacenado en la variable que es principemos una vez el usuario presione la tecla *enter*.
 
-```
+```csharp
 // TODO Fase 2: Leer inforacion desde teclado
 // ! Por asi decirlo es lo mismo que poner un Scanner.
 Console.Write("Como te llamas?");
@@ -434,17 +434,17 @@ Diferentes tipos de datos que existen en C#. En la primera se utilizan los núme
 ### Suma
 Realizar una suma de números enteros y una suma de números reales que son solicitados al usuario. <br><br>
 Para transformar los valores leídos a 1 bueno entero tienes que hacerlo de la siguiente forma:
-```
+```csharp
 Convert.ToInt32(System.Console.ReadLine());
 ```
 Para transformar los valores leídos a números reales tienes que hacerlo de la siguiente forma:
-```
+```csharp
 Convert.ToDecimal(System.Console.ReadLine());
 ```
 
 ### EJERCICIOS DE LA FASE 1
 
-```
+```csharp
 void Sumar()
 {
     string opcion = "sumar";
@@ -549,6 +549,257 @@ void NumDecimales()
 
 ## FASE 2: Booleanos y operdoderes logicos / relacionales
 
+```csharp
+bool v1 = true;
+bool v2 = false;
+//! Booleanos
+Console.Write("\n> Valor 1: " + v1 + "\n> Valor 2: " + v2);
+
+//! Operdares
+Console.Write("\nOPERDADOR AND");
+Console.Write("\n> Valor TRUE && Valor TRUE = " + (v1 && v1));
+Console.Write("\n> Valor TRUE && Valor FASLE = " + (v1 && v2));
+Console.Write("\n> Valor FALSE && Valor FASLE = " + (v2 && v2));
+
+Console.Write("\nOPERDADOR OR");
+Console.Write("\n> Valor TRUE || Valor TRUE = " + (v1 || v1));
+Console.Write("\n> Valor TRUE || Valor FASLE = " + (v1 || v2));
+Console.Write("\n> Valor FALSE || Valor FASLE = " + (v2 || v2));
+
+Console.Write("\nOPERDADOR NOT");
+Console.Write("\n> NOT Valor TRUE = " + (!v1));
+Console.Write("\n> NOT Valor FALSE = " + (!v2));
+
+
+Console.Write("\nOPERDADORES RELACIONALES");
+Console.Write("NUMERO 1: ");
+int num1 = Convert.ToInt32(Console.ReadLine());
+Console.Write("NUMERO 2: ");
+int num2 = Convert.ToInt32(Console.ReadLine());
+Console.Write(num1 + ">" + num2 + ": " + (num1 > num2));
+Console.Write(num1 + "<" + num2 + ": " + (num1 < num2));
+Console.Write(num1 + ">=" + num2 + ": " + (num1 >= num2));
+Console.Write(num1 + "<=" + num2 + ": " + (num1 <= num2));
+Console.Write(num1 + "==" + num2 + ": " + (num1 == num2));
+Console.Write(num1 + "!=" + num2 + ": " + (num1 != num2));
 ```
 
+
+<br>
+<br>
+<p align="center">
+<img height="90px" width="100%" src="https://i.pinimg.com/736x/d8/3d/4f/d83d4fcb95583f75c4181f689b705786.jpg" >
+</p>
+<br>
+<br>
+
+
+# Objetivo 4: Cadena de texto
+La utilizacion de cadena de texto. <br> Diferentes metodos utiles que se permitiran realizar operaciones complejas, unicamente con una instruccion. Dichas instrucciones son propias del tipo de dato cadena de texto.
+
+<br>
+<br>
+<p align="center">
+<img height="90px" width="100%" src="https://i.pinimg.com/736x/5d/90/28/5d9028e745277942a61c2904bb64593a.jpg" >
+</p>
+<br>
+<br>
+
+## FASE 1: Metodos propios de la clase
+
+- **ToUpper()**: Convierte todos los caracteres de la cadena a mayúsculas.
+    
+    ```csharp
+    string texto = "hola";
+    string mayusculas = texto.ToUpper(); // Resultado: "HOLA"
+    ```
+    
+- **ToLower()**: Convierte todos los caracteres de la cadena a minúsculas.
+    
+    ```csharp
+    string texto = "HOLA";
+    string minusculas = texto.ToLower(); // Resultado: "hola"
+    ```
+    
+- **Concat()**: Permite concatenar cadenas una tras otra.
+    
+    ```csharp
+    string str1 = "Hola ";
+    string str2 = "Mundo";
+    string resultado = string.Concat(str1, str2); // Resultado: "Hola Mundo"
+    ```
+    
+- **Format()**: Permite formar cadenas mediante sustituciones de marcadores.
+    
+    ```csharp
+    string nombre = "Juan";
+    int edad = 25;
+    string resultado = string.Format("Me llamo {0} y tengo {1} años", nombre, edad);
+    ```
+    
+- **StartsWith()**: Verifica si la cadena comienza con un texto específico. Devuelve True o False.
+    
+    ```csharp
+    string texto = "Hola Mundo";
+    bool empiezaCon = texto.StartsWith("Hola"); // Resultado: true
+    ```
+    
+- **EndsWith()**: Verifica si la cadena termina con un texto específico. Devuelve True o False.
+    
+    ```csharp
+    string texto = "Hola Mundo";
+    bool terminaCon = texto.EndsWith("Mundo"); // Resultado: true
+    ```
+    
+- **Equals()**: Compara si dos cadenas son iguales. Devuelve True o False.
+    
+    ```csharp
+    string str1 = "hola";
+    string str2 = "hola";
+    bool sonIguales = str1.Equals(str2); // Resultado: true
+    ```
+    
+- **Substring()**: Permite obtener una subcadena. Recibe la posición inicial y opcionalmente la longitud.
+    
+    ```csharp
+    string texto = "Hola Mundo";
+    string sub1 = texto.Substring(5);    // Resultado: "Mundo"
+    string sub2 = texto.Substring(0, 4); // Resultado: "Hola"
+    ```
+    
+- **TrimStart()**: Elimina los espacios en blanco (u otros caracteres especificados) del inicio de la cadena.
+    
+    ```csharp
+    string texto = "   Hola   ";
+    string resultado = texto.TrimStart(); // Resultado: "Hola   "
+    ```
+    
+- **TrimEnd()**: Elimina los espacios en blanco (u otros caracteres especificados) del final de la cadena.
+    
+    ```csharp
+    string texto = "   Hola   ";
+    string resultado = texto.TrimEnd(); // Resultado: "   Hola"
+    ```
+    
+- **Trim()**: Elimina los espacios en blanco (u otros caracteres especificados) del inicio y final de la cadena.
+    
+```csharp
+string texto = "   Hola   ";
+string resultado = texto.Trim(); // Resultado: "Hola"
 ```
+
+## Más informacion acerca de las cadenas de texto
+### Declaración de Strings
+
+```csharp
+// Declaración básica
+string texto = "Hola mundo";
+
+// String vacío
+string cadenaVacia = "";
+string otraCadenaVacia = string.Empty;
+
+// String literal con @
+string ruta = @"C:\carpeta\archivo.txt";
+
+// String interpolado
+string nombre = "Juan";
+string saludo = $"Hola {nombre}";
+```
+
+### Operaciones Comunes
+
+- **Concatenación:** Usando el operador + o el método String.Concat()
+- **Subcadenas:** Usando el método Substring()
+- **Búsqueda:** Con IndexOf(), Contains(), StartsWith(), EndsWith()
+- **Modificación:** Replace(), Trim(), ToUpper(), ToLower()
+
+### Métodos Útiles
+
+```csharp
+string texto = "  Ejemplo de texto  ";
+texto = texto.Trim();           // Elimina espacios
+texto = texto.ToUpper();        // Convierte a mayúsculas
+int longitud = texto.Length;    // Obtiene la longitud
+bool contiene = texto.Contains("de");  // Busca una subcadena
+```
+
+<br>
+<br>
+<p align="center">
+<img height="90px" width="100%" src="https://i.pinimg.com/736x/b6/37/7d/b6377d7575ae53bf28b570d37608c2d0.jpg" >
+</p>
+<br>
+<br>
+
+# Objetivo 5: Colecciones
+Las colecciones son las siguientes:
+- Arrays
+- Listas
+- Dicionarios
+
+## Arrays
+
+Los arrays son colecciones de tamaño fijo que almacenan elementos del mismo tipo.
+
+```csharp
+// Declaración e inicialización de arrays
+int[] numeros = new int[5];
+string[] nombres = { "Ana", "Carlos", "María" };
+
+// Acceso a elementos
+int primerNumero = numeros[0];
+
+// Longitud del array
+int longitud = numeros.Length;
+
+Listas (List)
+```
+
+Las listas son colecciones dinámicas que pueden crecer o reducirse según sea necesario.
+
+```csharp
+// Crear una lista
+List<string> frutas = new List<string>();
+
+// Agregar elementos
+frutas.Add("Manzana");
+frutas.Add("Banana");
+
+// Remover elementos
+frutas.Remove("Manzana");
+
+// Verificar si contiene un elemento
+bool contiene = frutas.Contains("Banana");
+
+// Obtener cantidad de elementos
+int cantidad = frutas.Count;
+```
+
+## Diccionarios (Dictionary<TKey, TValue>)
+
+Los diccionarios almacenan pares clave-valor, donde cada clave debe ser única.
+
+```csharp
+// Crear un diccionario
+Dictionary<string, int> edades = new Dictionary<string, int>();
+
+// Agregar elementos
+edades.Add("Juan", 25);
+edades["María"] = 30;
+
+// Acceder a valores
+int edadJuan = edades["Juan"];
+
+// Verificar si existe una clave
+bool existe = edades.ContainsKey("Juan");
+
+// Eliminar un elemento
+edades.Remove("Juan");
+```
+
+## Métodos Comunes
+
+- **Arrays:** Sort(), Reverse(), Clear(), Copy()
+- **Listas:** AddRange(), Insert(), RemoveAt(), Sort(), Clear()
+- **Diccionarios:** TryGetValue(), ContainsValue(), Clear(), Keys, Values
