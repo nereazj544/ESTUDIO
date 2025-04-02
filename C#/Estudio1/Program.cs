@@ -41,7 +41,7 @@ Console.WriteLine("Hola mi alias es: \"{0}\"  ", nombre);
 
 // TODO Fase 2: Leer inforacion desde teclado
 // ! Por asi decirlo es lo mismo que poner un Scanner.
-
+/*
 Console.Write("Como te llamas?");
 string name = Console.ReadLine();
 Console.Write("tienes perro o mascota?");
@@ -65,6 +65,7 @@ switch (respuesta1)
 
 // TODO FASE 1: NUMEROS Y OPERADORES ARITMETICOS | Suma, resta, multiplicacion, resta, division, modulo, uso de parentesis
 Console.WriteLine("Que quieres hacer {0}", name);
+*/
 Console.WriteLine("## OPCIONES ##");
 Console.WriteLine("1. Suma \n" +
 "2. Resta \n" +
