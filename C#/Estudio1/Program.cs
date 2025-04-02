@@ -24,4 +24,16 @@ int? numNull = null;
 // TODO Escribir por pantalla
 
 Console.Write(nombre);
+Console.WriteLine();  
+
+// TODO Fase 1: Mostrar informacion por pantalla
+Console.Write("Hola, ¿que haces? ¿como estas? ¿como tas?");
+Console.WriteLine(); //! Este puede ir vacio (o no) ⤴️ no puede ir vacio 
+Console.WriteLine("Hola");  
+Console.WriteLine("¿que haces?");  
+Console.ReadLine();
+
+
+
+
 

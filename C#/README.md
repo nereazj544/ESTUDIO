@@ -52,7 +52,7 @@ C# es una excelente opción para desarrolladores que buscan un lenguaje moderno,
 <br>
 <br>
 <p align="center">
-<img height="90px" width="100%" src="https://i.pinimg.com/736x/ad/a1/7c/ada17ca329b3fdad8c88d05894323ca6.jpg" >
+<img height="90px" width="100%" src="https://i.pinimg.com/736x/ae/e2/54/aee2544e1aa67cc2806092f2e517266b.jpg" >
 </p>
 <br>
 <br>
@@ -296,7 +296,7 @@ Componentes:
 <br>
 <br>
 <p align="center">
-<img height="90px" width="100%" src="https://i.pinimg.com/474x/e2/42/6f/e2426f8406eaa3c83335b90b0370b537.jpg" >
+<img height="90px" width="100%" src="https://i.pinimg.com/736x/8c/24/dc/8c24dc8885c659c829a74cc42d831f10.jpg" >
 </p>
 <br>
 <br>
