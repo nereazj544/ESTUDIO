@@ -21,3 +21,7 @@ const string md = "NO SE PUEDE CAMBIAR";
 int? numNull = null;
 
 
+// TODO Escribir por pantalla
+
+Console.Write(nombre);
+

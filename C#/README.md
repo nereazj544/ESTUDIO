@@ -242,7 +242,63 @@ Es importante recordar que las variables deben ser inicializadas antes de ser ut
 <br>
 <br>
 <p align="center">
-<img height="90px" width="100%" src="https://i.pinimg.com/736x/00/2c/8d/002c8df471e0d94688cb63e0c6324e44.jpg" >
+<img height="90px" width="100%" src="https://i.pinimg.com/474x/e2/42/6f/e2426f8406eaa3c83335b90b0370b537.jpg" >
 </p>
 <br>
 <br>
+
+
+# Objetivo 2: Manejo de mensajes por pantalla
+
+Mostrar información por pantalla y leer información de los usuarios son operadores necesarias para conseguir una interactividad alta con las aplicaciones que desarrolles por parte de los usuarios de éstas.
+
+## WRITE
+
+El comando *Write* es utilizado para escribrir mensajes por pantalla en la consola sin introducir salto de linea a final. La forma de utilizarlo es la siguiente:
+
+```
+Console.Write(escrito);
+```
+
+ Componentes:
+- **Console**: clase a la que pertenece el metodo *Write*. 
+- **Write**
+- **escrito**: cadena de texto que se mostrara en el mensaje mostrado en la consola.
+
+
+## WRITELINE
+
+El comando *Writeline* es utilizado para escribir mensajes por pantalla en la consola introducciendo un salto al final del mismo. 
+La forma de utilizarlo es la siguiente:
+
+```
+Console.WriteLine(escrito);
+```
+ Componentes:
+- **Console**: clase a la que pertenece el metodo *WriteLine*. 
+- **WriteLine**
+- **escrito**: cadena de texto que se mostrara en el mensaje mostrado en la consola.
+
+## READLINE
+
+El comando *ReadLine* es utilizado para leer mensajes escritos por los usuarios de las aplicaciones a traves de la consola.
+La forma de utilizarlo es la siguiente:
+
+```
+CadenaLeida = Console.ReadLine();
+```
+
+Componentes:
+- **CadenaLeida**: valiable que almacenara la cadena de texto leida mediante el comando.
+- **Console**
+- **ReadLine**
+
+<br>
+<br>
+<p align="center">
+<img height="90px" width="100%" src="https://i.pinimg.com/474x/e2/42/6f/e2426f8406eaa3c83335b90b0370b537.jpg" >
+</p>
+<br>
+<br>
+
+## FASE 1: Mostrar informacion por pantalla
