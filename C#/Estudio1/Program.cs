@@ -26,12 +26,20 @@ int? numNull = null;
 Console.Write(nombre);
 Console.WriteLine();  
 
-// TODO Fase 1: Mostrar informacion por pantalla
+// TODO Fase 1: Mostrar informacion por pantalla | Ej. 1
 Console.Write("Hola, ¿que haces? ¿como estas? ¿como tas?");
 Console.WriteLine(); //! Este puede ir vacio (o no) ⤴️ no puede ir vacio 
 Console.WriteLine("Hola");  
 Console.WriteLine("¿que haces?");  
-Console.ReadLine();
+// Console.ReadLine();
+
+
+// TODO Fase 1: Mostrar informacion por pantalla | Ej. 2
+Console.WriteLine("Hola mi alias es: " + nombre);
+Console.WriteLine("Hola mi alias es: {0}\n", nombre); //! Este es muy similar a cuando se formatea el mensaje en java
+Console.WriteLine("Hola mi alias es: \"{0}\"  ", nombre);
+
+
 
 
 

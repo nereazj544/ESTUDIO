@@ -302,3 +302,31 @@ Componentes:
 <br>
 
 ## FASE 1: Mostrar informacion por pantalla
+El primer ejercicio de la base de la fase consiste en comprobar qué la utilización de *WriteLine* sé diferencias de *Write* en que añade un salto de línea al final del mensaje al ejecutar la sentencia.
+```
+// TODO Fase 1: Mostrar informacion por pantalla | Ej. 1
+Console.Write("Hola, ¿que haces? ¿como estas? ¿como tas?");
+Console.WriteLine(); //! Este puede ir vacio (o no) ⤴️ no puede ir vacio 
+Console.WriteLine("Hola");  
+Console.WriteLine("¿que haces?");  
+// Console.ReadLine();
+```
+
+Se ha introducido una sentencia *ReadLine* al final del código fuente esto lo hacen lo hemos hecho para que no se cierre la aplicación y puedas observar la salida por pantalla para finalizar el programa presiona *enter* (o escribe algo y dale al enter).
+
+El segundo ejercicio de la fase consiste en aprender a añadir texto promeniente de variables a los mensajes que se muestran y cómo utilizar caracteres especiales dentro de los usajes que se muestran.
+
+```
+// TODO Fase 1: Mostrar informacion por pantalla | Ej. 2
+Console.WriteLine("Hola mi alias es: " + nombre);
+Console.WriteLine("Hola mi alias es: {0}\n", nombre); //! Este es muy similar a cuando se formatea el mensaje en java
+Console.WriteLine("Hola mi alias es: \"{0}\"  ", nombre);
+```
+
+La primera sentencia permite formar cadenas mediante concatentación ("+") de cadenas. 
+
+>[!NOTE]
+>
+> Al igual que sucede con **java**
+
+La segunda sentencia permite formar una cadena mediante la introducción de valores en una cadena primitiva.
