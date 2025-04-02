@@ -538,3 +538,17 @@ void NumDecimales()
     Console.WriteLine("RESULTADO: " + r);
 }
 ```
+
+<br>
+<br>
+<p align="center">
+<img height="90px" width="100%" src="https://i.pinimg.com/736x/53/92/51/539251a7f61089bc88407c7884c08f9f.jpg">
+</p>
+<br>
+<br>
+
+## FASE 2: Booleanos y operdoderes logicos / relacionales
+
+```
+
+```
