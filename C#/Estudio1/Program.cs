@@ -347,7 +347,8 @@ per2[0] + ","
 //? Remover elementos
 listEnt.Remove(3); //! borra el elemento selecionado
 listEnt.RemoveAt(0); //! borra la posicion (en este caso el primer elemento)
-per2.Clear(); //! Borra todo
+//! Borra todo
+// per2.Clear(); 
 
 // ? Verificar
 bool vf = personajes.Contains("Bill");
@@ -404,7 +405,8 @@ Console.WriteLine("Septiembre? " + mesesJapones.ContainsKey("Septiembre")); //? 
 Console.WriteLine("¿Diciembre?  " + mesesJapones.ContainsValue("Junigatsu")); //? Comprueba
 
 
-// TODO FASE 1: IF
+// TODO BUCLES
+
 while (true)
 {
     int numad = 13;
@@ -424,5 +426,13 @@ while (true)
     else if (numad < numuser)
     {
         Console.WriteLine("El numero es menor");
+    }
+}
+
+for (int i = 1; i < 3; i++)
+{
+    foreach (string item in per2)
+    {
+        Console.WriteLine("> Personaje " + i++ + ": " + item);
     }
 }
