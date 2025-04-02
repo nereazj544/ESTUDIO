@@ -803,3 +803,4 @@ edades.Remove("Juan");
 - **Arrays:** Sort(), Reverse(), Clear(), Copy()
 - **Listas:** AddRange(), Insert(), RemoveAt(), Sort(), Clear()
 - **Diccionarios:** TryGetValue(), ContainsValue(), Clear(), Keys, Values
+

@@ -275,3 +275,26 @@ string cadena = string.Format(text4, 3, "Tini", "tini");
 Console.WriteLine(cadena);
 
 
+// TODO FASE 1: Arrays
+string cadEspacios = "Fue lindo mientras duró";
+string[] a = cadEspacios.Split(' ');
+
+Console.WriteLine("Cadena or " + cadEspacios);
+Console.WriteLine(a[0]);
+Console.WriteLine(a[1]);
+Console.WriteLine(a[2]);
+Console.WriteLine(a[3]);
+
+string cadSep = "Amanda,Epsilon,nija,soldado";
+char[] sep = { ',' };
+
+a = cadSep.Split(sep);
+Console.WriteLine(a[0]);
+Console.WriteLine(a[1]);
+Console.WriteLine(a[2]);
+Console.WriteLine(a[3]);
+
+
+
+
+
