@@ -360,18 +360,18 @@ Console.WriteLine("¿cantidad? " + cant);
 Console.WriteLine("¿cantidad? " + cant2);
 
 // TODO LISTA DENTRO DE OTRA LISTA
-List<List<int>> ints = new List<List<int>> {new List<int>{1,2,3}, new List<int>{34, 78, 78}};
+List<List<int>> ints = new List<List<int>> { new List<int> { 1, 2, 3 }, new List<int> { 34, 78, 78 } };
 Console.WriteLine("n de elementos? " + ints.Count);
 
 Console.WriteLine("n de elementos?(primera lista) " + ints[0].Count);
 
-Console.WriteLine("elementos(primera lista) " 
+Console.WriteLine("elementos(primera lista) "
 + ints[0][0] + ","
 + ints[0][1] + ","
 + ints[0][2] + ","
 );
 
-Console.WriteLine("elementos(primera lista) " 
+Console.WriteLine("elementos(primera lista) "
 + ints[1][0] + ","
 + ints[1][1] + ","
 + ints[1][2] + ","
@@ -381,8 +381,48 @@ Console.WriteLine("elementos(primera lista) "
 
 //TODO FASE 1: Diccionarios
 
+Dictionary<string, string> mesesJapones = new Dictionary<string, string>();
+
+//? El primer valor es la clave y el segundo el valor
+
+mesesJapones.Add("Enero", "Ichigatsu");
+mesesJapones.Add("Febrero", "Nigatsu");
+mesesJapones.Add("Marzo", "Sangatsu");
+mesesJapones.Add("Abril", "Shigatsu");
+mesesJapones.Add("Mayo", "Gogatsu");
+mesesJapones.Add("Junio", "Rokugatsu");
+mesesJapones.Add("Julio", "Sichigatsu");
+mesesJapones.Add("Agosto", "Hachigatsu");
+mesesJapones.Add("Septiembre", "Kugatsu");
+mesesJapones.Add("Octubre", "Jugatsu");
+mesesJapones.Add("Noviembre", "Juichigatsu");
+mesesJapones.Add("Diciembre", "Junigatsu");
+
+Console.WriteLine("Tamalo del diccionario: " + mesesJapones.Count);
+Console.WriteLine("Agosto: " + mesesJapones["Agosto"]);
+Console.WriteLine("Septiembre? " + mesesJapones.ContainsKey("Septiembre")); //? Comprueba
+Console.WriteLine("¿Diciembre?  " + mesesJapones.ContainsValue("Junigatsu")); //? Comprueba
 
 
+// TODO FASE 1: IF
+while (true)
+{
+    int numad = 13;
+    Console.WriteLine("> Pon un nuero");
+    int numuser = Convert.ToInt32(Console.ReadLine());
 
+    if (numuser.Equals(numad))
+    {
+        Console.WriteLine("¡¡FELEICIDADES!!");
+        break;
 
-
+    }
+    else if (numad > numuser)
+    {
+        Console.WriteLine("El numero es mayor");
+    }
+    else if (numad < numuser)
+    {
+        Console.WriteLine("El numero es menor");
+    }
+}

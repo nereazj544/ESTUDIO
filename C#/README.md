@@ -804,3 +804,156 @@ edades.Remove("Juan");
 - **Listas:** AddRange(), Insert(), RemoveAt(), Sort(), Clear()
 - **Diccionarios:** TryGetValue(), ContainsValue(), Clear(), Keys, Values
 
+<br>
+<br>
+<p align="center">
+<img height="90px" width="100%" src="https://i.pinimg.com/736x/d0/eb/9f/d0eb9f0549f2d54b9e247eb79c79cb68.jpg">
+</p>
+<br>
+<br>
+
+# Objetivo 6: Control flujo de programa
+El control de flujo en C# permite dirigir la ejecución del programa basándose en condiciones y decisiones. Esto es fundamental para crear programas dinámicos y responder a diferentes situaciones.
+
+<br>
+<br>
+<p align="center">
+<img height="90px" width="100%" src="https://i.pinimg.com/474x/7f/a2/d0/7fa2d09e1114e1e97176569b65e2db80.jpg">
+</p>
+<br>
+<br>
+
+## FASE 1: IF
+La sentencia if es la estructura de control más básica y permite ejecutar código basado en una condición booleana.
+
+```csharp
+// If simple
+if (edad >= 18) {
+    Console.WriteLine("Es mayor de edad");
+}
+
+// If-else
+if (numero > 0) {
+    Console.WriteLine("Número positivo");
+} else {
+    Console.WriteLine("Número negativo o cero");
+}
+
+// If-else if-else
+if (nota >= 90) {
+    Console.WriteLine("A");
+} else if (nota >= 80) {
+    Console.WriteLine("B");
+} else if (nota >= 70) {
+    Console.WriteLine("C");
+} else {
+    Console.WriteLine("D");
+}
+
+```
+
+<br>
+<br>
+<p align="center">
+<img height="90px" width="100%" src="https://i.pinimg.com/474x/c8/6d/6c/c86d6c487d345d32247ef3b0e87f572c.jpg">
+</p>
+<br>
+<br>
+
+## FASE 2: Switch
+La sentencia switch es útil cuando necesitas comparar una variable contra múltiples valores constantes.
+
+```csharp
+int dia = 3;
+switch (dia) {
+    case 1:
+        Console.WriteLine("Lunes");
+        break;
+    case 2:
+        Console.WriteLine("Martes");
+        break;
+    case 3:
+        Console.WriteLine("Miércoles");
+        break;
+    default:
+        Console.WriteLine("Otro día");
+        break;
+}
+
+// Switch con expresiones (C# 8.0+)
+string mensaje = dia switch {
+    1 => "Lunes",
+    2 => "Martes",
+    3 => "Miércoles",
+    _ => "Otro día"
+};
+
+```
+<aside>
+El switch es más eficiente que múltiples if-else cuando se compara una única variable contra varios valores constantes. Sin embargo, if-else es más flexible para condiciones complejas.</aside>
+
+
+<br>
+<br>
+<p align="center">
+<img height="90px" width="100%" src="" >
+</p>
+<br>
+<br>
+
+# Objetivo 7: Bucles
+## FASE 1: While
+## FASE 2: For
+## FASE 3: Do
+## FASE 4: Anidados
+## FASE 5: FOREACH
+
+<br>
+<br>
+<p align="center">
+<img height="90px" width="100%" src="">
+</p>
+<br>
+<br>
+
+# Objetivo 8: Funciones
+## FASE 1: Uso de una funcion
+## FASE 2: Funciones anidads
+
+<br>
+<br>
+<p align="center">
+<img height="90px" width="100%" src="">
+</p>
+<br>
+<br>
+
+# Objetivo 9: Programacion orientada a objetos basica
+## FASE 1: Clases simples
+## FASE 2: Composicion
+
+<br>
+<br>
+<p align="center">
+<img height="90px" width="100%" src="">
+</p>
+<br>
+<br>
+
+# Objetivo 10: Programacion orientada objetos avanzados
+## FASE 1: Herencia
+## FASE 2: Polimorfismo
+
+<br>
+<br>
+<p align="center">
+<img height="90px" width="100%" src="">
+</p>
+<br>
+<br>
+
+# Objetivo 11: Control de excepciones
+## FASE 1: Controlando excepciones
+
+
+
