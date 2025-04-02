@@ -329,4 +329,212 @@ La primera sentencia permite formar cadenas mediante concatentación ("+") de ca
 >
 > Al igual que sucede con **java**
 
-La segunda sentencia permite formar una cadena mediante la introducción de valores en una cadena primitiva.
+La segunda sentencia permite formar una cadena mediante la introducción de valores en una cadena primitiva. <br>
+La forma en la que funciona es mediante el reemplazo de una cadena de texto específica que se encuentra dentro de la cadena primitiva por el valor correspondiente que se indica en la construcción de la cadena, sigue el siguiente formato: **{n}**. <br>
+El valor **n** indica la cadena concreta por la que se reemplazará del listado de cadenas al introducir en la cadena primitiva el primer valor que tomará **n** es el **cero**.
+
+>[!NOTE]
+> 
+> Es como los arrays en java que empiezan por 0....10
+
+Se ha introducido el carácter **\n** Que añade un salto de linea a la cadena.
+
+
+<br>
+<br>
+<p align="center">
+<img height="90px" width="100%" src="https://i.pinimg.com/736x/24/e1/20/24e12077ac44c5f7a5b847a794b3fd16.jpg" >
+</p>
+<br>
+<br>
+
+## FASE 2: Leer informacion desde teclado
+La segunda fase del objetivo consiste en leer información introducida por los usuarios de las aplicaciones en el teclado. <br>
+La sentencia para leer información a través del teclado es *ReadLine* todo lo que se introduzca mediante teclado será almacenado en la variable que es principemos una vez el usuario presione la tecla *enter*.
+
+```
+// TODO Fase 2: Leer inforacion desde teclado
+// ! Por asi decirlo es lo mismo que poner un Scanner.
+Console.Write("Como te llamas?");
+string name = Console.ReadLine();
+Console.Write("tienes perro o mascota?");
+string r = Console.ReadLine();
+Console.WriteLine("HOLA! " + name + " tu respuesta a la pregunta: " + r + "\n");
+```
+
+<br>
+<br>
+<p align="center">
+<img height="90px" width="100%" src="https://i.pinimg.com/736x/2c/4c/ff/2c4cffc5749394b7ac689f136f271ca8.jpg" >
+</p>
+<br>
+<br>
+
+# Objetivo 3: Tipos de datos basicos y operados
+Diferentes tipos de datos que existen en C#. En la primera se utilizan los números de diferentes operaciones aritméticos y en la segunda los tipos de datos booleanos y los diferentes operadores lógicas.
+
+## Tipo de datos
+
+### Tipos Numéricos
+
+- **byte:** 0 a 255 (8 bits sin signo)
+- **short:** -32,768 a 32,767 (16 bits)
+- **int:** -2^31 a 2^31-1 (32 bits)
+- **long:** -2^63 a 2^63-1 (64 bits)
+- **float:** ±1.5 × 10^-45 a ±3.4 × 10^38 (32 bits)
+- **double:** ±5.0 × 10^-324 a ±1.7 × 10^308 (64 bits)
+- **decimal:** Mayor precisión para cálculos financieros (128 bits)
+
+## Operadores en C#
+
+### Operadores de Asignación
+
+- **=** Asignación simple
+- **+=** Suma y asignación
+- **-=** Resta y asignación
+- ***=** Multiplicación y asignación
+- **/=** División y asignación
+
+### Operadores Aritméticos
+
+- **+** Suma
+- **-** Resta
+- ***** Multiplicación
+- **/** División
+- **%** Módulo (resto de división)
+- **++** Incremento
+- **--** Decremento
+
+### Operadores Relacionales
+
+- **==** Igual a
+- **!=** Diferente de
+- **>** Mayor que
+- **<** Menor que
+- **>=** Mayor o igual que
+- **<=** Menor o igual que
+
+### Operadores Lógicos
+
+- **&&** AND lógico
+- **||** OR lógico
+- **!** NOT lógico
+- **^** XOR lógico
+
+<br>
+<br>
+<p align="center">
+<img height="90px" width="100%" src="https://i.pinimg.com/736x/a9/ff/6a/a9ff6a88c6d7e6ce2d5127736da635ad.jpg" >
+</p>
+<br>
+<br>
+
+## FASE 1: NUMEROS Y OPERADORES ARITMETICOS
+
+### Suma
+Realizar una suma de números enteros y una suma de números reales que son solicitados al usuario. <br><br>
+Para transformar los valores leídos a 1 bueno entero tienes que hacerlo de la siguiente forma:
+```
+Convert.ToInt32(System.Console.ReadLine());
+```
+Para transformar los valores leídos a números reales tienes que hacerlo de la siguiente forma:
+```
+Convert.ToDecimal(System.Console.ReadLine());
+```
+
+### EJERCICIOS DE LA FASE 1
+
+```
+void Sumar()
+{
+    string opcion = "sumar";
+    Console.Write("## SE HA SELECIONADO LA OPCION {0} ## \n", opcion);
+
+    Console.Write("NUMERO 1: ");
+    int num1 = Convert.ToInt32(Console.ReadLine());
+    Console.Write("NUMERO 2: ");
+    int num2 = Convert.ToInt32(Console.ReadLine());
+    int r = num1 + num2;
+    Console.WriteLine("RESULTADO: " + r);
+}
+
+void Restar()
+{
+    string opcion = "restar";
+    Console.Write("## SE HA SELECIONADO LA OPCION {0} ## \n", opcion);
+
+    Console.Write("NUMERO 1: ");
+    int num1 = Convert.ToInt32(Console.ReadLine());
+    Console.Write("NUMERO 2: ");
+    int num2 = Convert.ToInt32(Console.ReadLine());
+    int r = num1 - num2;
+    Console.WriteLine("RESULTADO: " + r);
+}
+
+void Multiplicar()
+{
+    string opcion = "Multiplicar";
+    Console.Write("## SE HA SELECIONADO LA OPCION {0} ## \n", opcion);
+
+    Console.Write("NUMERO 1: ");
+    int num1 = Convert.ToInt32(Console.ReadLine());
+    Console.Write("NUMERO 2: ");
+    int num2 = Convert.ToInt32(Console.ReadLine());
+    int r = num1 * num2;
+    Console.WriteLine("RESULTADO: " + r);
+}
+
+void Division()
+{
+    string opcion = "Division";
+    Console.Write("## SE HA SELECIONADO LA OPCION {0} ## \n", opcion);
+
+    Console.Write("NUMERO 1: ");
+    int num1 = Convert.ToInt32(Console.ReadLine());
+    Console.Write("NUMERO 2: ");
+    int num2 = Convert.ToInt32(Console.ReadLine());
+    int r = num1 / num2;
+    Console.WriteLine("RESULTADO: " + r);
+}
+void Modulo()
+{
+    string opcion = "Modulo";
+    Console.Write("## SE HA SELECIONADO LA OPCION {0} ## \n", opcion);
+
+    Console.Write("NUMERO 1: ");
+    int num1 = Convert.ToInt32(Console.ReadLine());
+    Console.Write("NUMERO 2: ");
+    int num2 = Convert.ToInt32(Console.ReadLine());
+    int r = num1 % num2;
+    Console.WriteLine("RESULTADO: " + r);
+}
+void UsoParentesis()
+{
+    string opcion = "Uso Parentesis";
+    Console.Write("## SE HA SELECIONADO LA OPCION {0} ## \n", opcion);
+
+    Console.Write("NUMERO 1: ");
+    int num1 = Convert.ToInt32(Console.ReadLine());
+    Console.Write("NUMERO 2: ");
+    int num2 = Convert.ToInt32(Console.ReadLine());
+    Console.Write("NUMERO 1: ");
+    int num3 = Convert.ToInt32(Console.ReadLine());
+    Console.Write("NUMERO 2: ");
+    int num4 = Convert.ToInt32(Console.ReadLine());
+    int r = (num1 * num2) - num4 + num3;
+    Console.WriteLine("RESULTADO: " + r);
+}
+
+void NumDecimales()
+{
+    string opcion = "sumar / Con numeros Decimales";
+    Console.Write("## SE HA SELECIONADO LA OPCION {0} ## \n", opcion);
+
+    Console.Write("NUMERO 1: ");
+    decimal num1 = Convert.ToDecimal(Console.ReadLine());
+    Console.Write("NUMERO 2: ");
+    decimal num2 = Convert.ToInt32(Console.ReadLine());
+    decimal r = num1 + num2;
+    Console.WriteLine("RESULTADO: " + r);
+}
+```
