@@ -437,3 +437,57 @@ for (int i = 1; i < 3; i++)
         Console.WriteLine("> Personaje " + i++ + ": " + item);
     }
 }
+
+
+
+// TODO FUNCIONES
+
+void TuNombre()
+{
+    string name2 = "candela";
+    Console.WriteLine("> Su nombre es: " + name2);
+
+    string respuesta = Console.ReadLine();
+    switch (respuesta)
+    {
+        case "si":
+            Console.WriteLine("¡Si!");
+            break;
+        case "no":
+            Console.WriteLine("¿no? ¿y cual es?");
+            string nombre = Console.ReadLine();
+            TuNombre2(nombre);
+            break;
+
+        default:
+            break;
+    }
+}
+
+TuNombre();
+void TuNombre2(string nombre)
+{
+    Console.WriteLine("HOLA! " + nombre);
+}
+
+
+// TODO FUNCIONES ANIDADAS
+
+static int SolicitarNumeros()
+{
+    Console.WriteLine("Introduce un numero: ");
+    int valor = Convert.ToInt32(Console.ReadLine());
+    return valor;
+}
+
+
+void SumarNumeros()
+{
+    int v1 = SolicitarNumeros();
+    int v2 = SolicitarNumeros();
+    Console.WriteLine("Numero 1: " + v1);
+    Console.WriteLine("Numero 2: " + v2);
+    Console.WriteLine("Resultado: " + (v1 + v2));
+}
+
+SumarNumeros();
