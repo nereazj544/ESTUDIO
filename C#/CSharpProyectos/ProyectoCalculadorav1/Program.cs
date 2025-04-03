@@ -1,7 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 Console.WriteLine("## CALCULADORA ##");
 Console.WriteLine("== Opciones ==");
-Console.WriteLine("1. Suma \n 2. Restar \n 3. Multiplicar \n 4. Dividir");
+Console.WriteLine("\n 1. Suma \n 2. Restar \n 3. Multiplicar \n 4. Dividir");
 int r = Convert.ToInt32(Console.ReadLine());
 switch (r)
 {

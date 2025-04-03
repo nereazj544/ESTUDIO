@@ -21,3 +21,10 @@ C:\Users\nzjha\Desktop\ESTUDIO\C#\CSharpProyectos\ProyectoCalculadorav1\obj\Debu
 C:\Users\nzjha\Desktop\ESTUDIO\C#\CSharpProyectos\ProyectoCalculadorav1\obj\Debug\net8.0\ProyectoCalculadorav1.dll
 C:\Users\nzjha\Desktop\ESTUDIO\C#\CSharpProyectos\ProyectoCalculadorav1\obj\Debug\net8.0\refint\ProyectoCalculadorav1.dll
 C:\Users\nzjha\Desktop\ESTUDIO\C#\CSharpProyectos\ProyectoCalculadorav1\obj\Debug\net8.0\ProyectoCalculadorav1.pdb
+C:\Users\nzjha\Desktop\ESTUDIO\C#\CSharpProyectos\ProyectoCalculadorav1\bin\Debug\net8.0\ProyectoCalculadorav1.exe
+C:\Users\nzjha\Desktop\ESTUDIO\C#\CSharpProyectos\ProyectoCalculadorav1\bin\Debug\net8.0\ProyectoCalculadorav1.deps.json
+C:\Users\nzjha\Desktop\ESTUDIO\C#\CSharpProyectos\ProyectoCalculadorav1\bin\Debug\net8.0\ProyectoCalculadorav1.runtimeconfig.json
+C:\Users\nzjha\Desktop\ESTUDIO\C#\CSharpProyectos\ProyectoCalculadorav1\bin\Debug\net8.0\ProyectoCalculadorav1.dll
+C:\Users\nzjha\Desktop\ESTUDIO\C#\CSharpProyectos\ProyectoCalculadorav1\bin\Debug\net8.0\ProyectoCalculadorav1.pdb
+C:\Users\nzjha\Desktop\ESTUDIO\C#\CSharpProyectos\ProyectoCalculadorav1\obj\Debug\net8.0\ProyectoCalculadorav1.genruntimeconfig.cache
+C:\Users\nzjha\Desktop\ESTUDIO\C#\CSharpProyectos\ProyectoCalculadorav1\obj\Debug\net8.0\ref\ProyectoCalculadorav1.dll
