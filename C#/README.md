@@ -1,4 +1,4 @@
-# Introducción a C#
+# Introducción a C #
 
 C# (pronunciado "C Sharp") es un lenguaje de programación moderno, orientado a objetos y de tipo seguro desarrollado por Microsoft como parte de la plataforma .NET.
 
@@ -16,11 +16,11 @@ C# (pronunciado "C Sharp") es un lenguaje de programación moderno, orientado a 
 - **Orientado a Objetos:** Soporta conceptos como encapsulación, herencia y polimorfismo.
 - **Multiplataforma:** Con .NET Core, las aplicaciones C# pueden ejecutarse en Windows, Linux y macOS.
 - **Versatilidad:** Puede usarse para desarrollar:
-    - Aplicaciones de escritorio
-    - Aplicaciones web
-    - Juegos (con Unity)
-    - Aplicaciones móviles (con Xamarin)
-    - APIs y servicios web
+  - Aplicaciones de escritorio
+  - Aplicaciones web
+  - Juegos (con Unity)
+  - Aplicaciones móviles (con Xamarin)
+  - APIs y servicios web
 
 ## Ventajas
 
@@ -145,6 +145,7 @@ Es importante ejecutar estos comandos en el directorio donde deseas crear tu pro
 ## Variable
 
 Las variables son datos que necesitas almacenar y utilizar en los programas y que residen en la memoria del oredanor. Tienen las siguientes características:
+
 - **Nombre**: identificador dentro del codigo fuente que ultilizamos para usarlas.
 - **Tipo**: tipo de dato que almacena la variable (numero, entero, cadena de texto, etc)
 - **Valor**: valor que almacenan.
@@ -247,7 +248,6 @@ Es importante recordar que las variables deben ser inicializadas antes de ser ut
 <br>
 <br>
 
-
 # Objetivo 2: Manejo de mensajes por pantalla
 
 Mostrar información por pantalla y leer información de los usuarios son operadores necesarias para conseguir una interactividad alta con las aplicaciones que desarrolles por parte de los usuarios de éstas.
@@ -261,21 +261,23 @@ Console.Write(escrito);
 ```
 
  Componentes:
-- **Console**: clase a la que pertenece el metodo *Write*. 
+
+- **Console**: clase a la que pertenece el metodo *Write*.
 - **Write**
 - **escrito**: cadena de texto que se mostrara en el mensaje mostrado en la consola.
 
-
 ## WRITELINE
 
-El comando *Writeline* es utilizado para escribir mensajes por pantalla en la consola introducciendo un salto al final del mismo. 
+El comando *Writeline* es utilizado para escribir mensajes por pantalla en la consola introducciendo un salto al final del mismo.
 La forma de utilizarlo es la siguiente:
 
 ```csharp
 Console.WriteLine(escrito);
 ```
+
  Componentes:
-- **Console**: clase a la que pertenece el metodo *WriteLine*. 
+
+- **Console**: clase a la que pertenece el metodo *WriteLine*.
 - **WriteLine**
 - **escrito**: cadena de texto que se mostrara en el mensaje mostrado en la consola.
 
@@ -289,6 +291,7 @@ CadenaLeida = Console.ReadLine();
 ```
 
 Componentes:
+
 - **CadenaLeida**: valiable que almacenara la cadena de texto leida mediante el comando.
 - **Console**
 - **ReadLine**
@@ -302,7 +305,9 @@ Componentes:
 <br>
 
 ## FASE 1: Mostrar informacion por pantalla
+
 El primer ejercicio de la base de la fase consiste en comprobar qué la utilización de *WriteLine* sé diferencias de *Write* en que añade un salto de línea al final del mensaje al ejecutar la sentencia.
+
 ```csharp
 // TODO Fase 1: Mostrar informacion por pantalla | Ej. 1
 Console.Write("Hola, ¿que haces? ¿como estas? ¿como tas?");
@@ -323,7 +328,7 @@ Console.WriteLine("Hola mi alias es: {0}\n", nombre); //! Este es muy similar a 
 Console.WriteLine("Hola mi alias es: \"{0}\"  ", nombre);
 ```
 
-La primera sentencia permite formar cadenas mediante concatentación ("+") de cadenas. 
+La primera sentencia permite formar cadenas mediante concatentación ("+") de cadenas.
 
 >[!NOTE]
 >
@@ -334,11 +339,10 @@ La forma en la que funciona es mediante el reemplazo de una cadena de texto espe
 El valor **n** indica la cadena concreta por la que se reemplazará del listado de cadenas al introducir en la cadena primitiva el primer valor que tomará **n** es el **cero**.
 
 >[!NOTE]
-> 
+>
 > Es como los arrays en java que empiezan por 0....10
 
 Se ha introducido el carácter **\n** Que añade un salto de linea a la cadena.
-
 
 <br>
 <br>
@@ -349,6 +353,7 @@ Se ha introducido el carácter **\n** Que añade un salto de linea a la cadena.
 <br>
 
 ## FASE 2: Leer informacion desde teclado
+
 La segunda fase del objetivo consiste en leer información introducida por los usuarios de las aplicaciones en el teclado. <br>
 La sentencia para leer información a través del teclado es *ReadLine* todo lo que se introduzca mediante teclado será almacenado en la variable que es principemos una vez el usuario presione la tecla *enter*.
 
@@ -371,6 +376,7 @@ Console.WriteLine("HOLA! " + name + " tu respuesta a la pregunta: " + r + "\n");
 <br>
 
 # Objetivo 3: Tipos de datos basicos y operados
+
 Diferentes tipos de datos que existen en C#. En la primera se utilizan los números de diferentes operaciones aritméticos y en la segunda los tipos de datos booleanos y los diferentes operadores lógicas.
 
 ## Tipo de datos
@@ -385,7 +391,7 @@ Diferentes tipos de datos que existen en C#. En la primera se utilizan los núme
 - **double:** ±5.0 × 10^-324 a ±1.7 × 10^308 (64 bits)
 - **decimal:** Mayor precisión para cálculos financieros (128 bits)
 
-## Operadores en C#
+## Operadores en C #
 
 ### Operadores de Asignación
 
@@ -432,12 +438,16 @@ Diferentes tipos de datos que existen en C#. En la primera se utilizan los núme
 ## FASE 1: NUMEROS Y OPERADORES ARITMETICOS
 
 ### Suma
+
 Realizar una suma de números enteros y una suma de números reales que son solicitados al usuario. <br><br>
 Para transformar los valores leídos a 1 bueno entero tienes que hacerlo de la siguiente forma:
+
 ```csharp
 Convert.ToInt32(System.Console.ReadLine());
 ```
+
 Para transformar los valores leídos a números reales tienes que hacerlo de la siguiente forma:
+
 ```csharp
 Convert.ToDecimal(System.Console.ReadLine());
 ```
@@ -584,7 +594,6 @@ Console.Write(num1 + "==" + num2 + ": " + (num1 == num2));
 Console.Write(num1 + "!=" + num2 + ": " + (num1 != num2));
 ```
 
-
 <br>
 <br>
 <p align="center">
@@ -593,8 +602,8 @@ Console.Write(num1 + "!=" + num2 + ": " + (num1 != num2));
 <br>
 <br>
 
-
 # Objetivo 4: Cadena de texto
+
 La utilizacion de cadena de texto. <br> Diferentes metodos utiles que se permitiran realizar operaciones complejas, unicamente con una instruccion. Dichas instrucciones son propias del tipo de dato cadena de texto.
 
 <br>
@@ -608,87 +617,88 @@ La utilizacion de cadena de texto. <br> Diferentes metodos utiles que se permiti
 ## FASE 1: Metodos propios de la clase
 
 - **ToUpper()**: Convierte todos los caracteres de la cadena a mayúsculas.
-    
+
     ```csharp
     string texto = "hola";
     string mayusculas = texto.ToUpper(); // Resultado: "HOLA"
     ```
-    
+
 - **ToLower()**: Convierte todos los caracteres de la cadena a minúsculas.
-    
+
     ```csharp
     string texto = "HOLA";
     string minusculas = texto.ToLower(); // Resultado: "hola"
     ```
-    
+
 - **Concat()**: Permite concatenar cadenas una tras otra.
-    
+
     ```csharp
     string str1 = "Hola ";
     string str2 = "Mundo";
     string resultado = string.Concat(str1, str2); // Resultado: "Hola Mundo"
     ```
-    
+
 - **Format()**: Permite formar cadenas mediante sustituciones de marcadores.
-    
+
     ```csharp
     string nombre = "Juan";
     int edad = 25;
     string resultado = string.Format("Me llamo {0} y tengo {1} años", nombre, edad);
     ```
-    
+
 - **StartsWith()**: Verifica si la cadena comienza con un texto específico. Devuelve True o False.
-    
+
     ```csharp
     string texto = "Hola Mundo";
     bool empiezaCon = texto.StartsWith("Hola"); // Resultado: true
     ```
-    
+
 - **EndsWith()**: Verifica si la cadena termina con un texto específico. Devuelve True o False.
-    
+
     ```csharp
     string texto = "Hola Mundo";
     bool terminaCon = texto.EndsWith("Mundo"); // Resultado: true
     ```
-    
+
 - **Equals()**: Compara si dos cadenas son iguales. Devuelve True o False.
-    
+
     ```csharp
     string str1 = "hola";
     string str2 = "hola";
     bool sonIguales = str1.Equals(str2); // Resultado: true
     ```
-    
+
 - **Substring()**: Permite obtener una subcadena. Recibe la posición inicial y opcionalmente la longitud.
-    
+
     ```csharp
     string texto = "Hola Mundo";
     string sub1 = texto.Substring(5);    // Resultado: "Mundo"
     string sub2 = texto.Substring(0, 4); // Resultado: "Hola"
     ```
-    
+
 - **TrimStart()**: Elimina los espacios en blanco (u otros caracteres especificados) del inicio de la cadena.
-    
+
     ```csharp
     string texto = "   Hola   ";
     string resultado = texto.TrimStart(); // Resultado: "Hola   "
     ```
-    
+
 - **TrimEnd()**: Elimina los espacios en blanco (u otros caracteres especificados) del final de la cadena.
-    
+
     ```csharp
     string texto = "   Hola   ";
     string resultado = texto.TrimEnd(); // Resultado: "   Hola"
     ```
-    
+
 - **Trim()**: Elimina los espacios en blanco (u otros caracteres especificados) del inicio y final de la cadena.
-    
+
 ```csharp
 string texto = "   Hola   ";
 string resultado = texto.Trim(); // Resultado: "Hola"
 ```
 
 ## Más informacion acerca de las cadenas de texto
+
 ### Declaración de Strings
 
 ```csharp
@@ -733,7 +743,9 @@ bool contiene = texto.Contains("de");  // Busca una subcadena
 <br>
 
 # Objetivo 5: Colecciones
+
 Las colecciones son las siguientes:
+
 - Arrays
 - Listas
 - Dicionarios
@@ -813,6 +825,7 @@ edades.Remove("Juan");
 <br>
 
 # Objetivo 6: Control flujo de programa
+
 El control de flujo en C# permite dirigir la ejecución del programa basándose en condiciones y decisiones. Esto es fundamental para crear programas dinámicos y responder a diferentes situaciones.
 
 <br>
@@ -824,6 +837,7 @@ El control de flujo en C# permite dirigir la ejecución del programa basándose 
 <br>
 
 ## FASE 1: IF
+
 La sentencia if es la estructura de control más básica y permite ejecutar código basado en una condición booleana.
 
 ```csharp
@@ -861,6 +875,7 @@ if (nota >= 90) {
 <br>
 
 ## FASE 2: Switch
+
 La sentencia switch es útil cuando necesitas comparar una variable contra múltiples valores constantes.
 
 ```csharp
@@ -889,71 +904,238 @@ string mensaje = dia switch {
 };
 
 ```
+
 <aside>
 El switch es más eficiente que múltiples if-else cuando se compara una única variable contra varios valores constantes. Sin embargo, if-else es más flexible para condiciones complejas.</aside>
-
 
 <br>
 <br>
 <p align="center">
-<img height="90px" width="100%" src="" >
+<img height="90px" width="100%" src="https://i.pinimg.com/736x/ea/70/c5/ea70c55e8b3e30131db34a7c493883ac.jpg">
 </p>
 <br>
 <br>
 
 # Objetivo 7: Bucles
+
 ## FASE 1: While
+
+El bucle while ejecuta un bloque de código mientras una condición sea verdadera.
+
+```csharp
+int i = 0;
+while (i < 5)
+{
+    Console.WriteLine(i);
+    i++;
+}
+
+```
+
 ## FASE 2: For
+
+El bucle for es ideal cuando sabes exactamente cuántas iteraciones necesitas.
+
+```csharp
+for (int i = 0; i < 5; i++)
+{
+    Console.WriteLine(i);
+}
+
+```
+
 ## FASE 3: Do
-## FASE 4: Anidados
+
+El bucle do-while ejecuta el código al menos una vez antes de verificar la condición.
+
+```csharp
+int i = 0;
+do
+{
+    Console.WriteLine(i);
+    i++;
+} while (i < 5);
+
+```
+
+## FASE 4: Bucles Anidados
+
+Los bucles anidados son bucles dentro de otros bucles.
+
+```csharp
+for (int i = 0; i < 3; i++)
+{
+    for (int j = 0; j < 3; j++)
+    {
+        Console.WriteLine($"i: {i}, j: {j}");
+    }
+}
+
+```
+
 ## FASE 5: FOREACH
+
+El bucle foreach se utiliza para iterar sobre colecciones.
+
+```csharp
+string[] frutas = {"manzana", "banana", "naranja"};
+foreach (string fruta in frutas)
+{
+    Console.WriteLine(fruta);
+}
+
+```
 
 <br>
 <br>
 <p align="center">
-<img height="90px" width="100%" src="">
+<img height="90px" width="100%" src="https://i.pinimg.com/474x/0e/8a/36/0e8a36dd2f2e0de2224977f1523b4f6b.jpg">
 </p>
 <br>
 <br>
 
 # Objetivo 8: Funciones
+
 ## FASE 1: Uso de una funcion
-## FASE 2: Funciones anidads
+
+## FASE 2: Funciones anidadas
+
+C# permite el uso de funciones locales (funciones dentro de otras funciones).
+
+```csharp
+public static int CalculoComplejo(int x)
+{
+    int CuadradoLocal(int n)
+    {
+        return n * n;
+    }
+
+    return CuadradoLocal(x) + x;
+}
+
+```
 
 <br>
 <br>
 <p align="center">
-<img height="90px" width="100%" src="">
+<img height="90px" width="100%" src="https://i.pinimg.com/736x/40/8f/ca/408fca06b23a4ada885df9ccacb0b177.jpg">
 </p>
 <br>
 <br>
 
 # Objetivo 9: Programacion orientada a objetos basica
+
 ## FASE 1: Clases simples
-## FASE 2: Composicion
+
+Las clases son plantillas para crear objetos.
+
+```csharp
+public class Persona
+{
+    public string Nombre { get; set; }
+    public int Edad { get; set; }
+
+    public void Saludar()
+    {
+        Console.WriteLine($"Hola, soy {Nombre}");
+    }
+}
+
+```
+
+## FASE 2: Composición
+
+La composición permite crear clases que contienen otras clases.
+
+```csharp
+public class Dirección
+{
+    public string Calle { get; set; }
+    public string Ciudad { get; set; }
+}
+
+public class Empleado
+{
+    public string Nombre { get; set; }
+    public Dirección Dirección { get; set; }
+}
+
+```
 
 <br>
 <br>
 <p align="center">
-<img height="90px" width="100%" src="">
+<img height="90px" width="100%" src="https://i.pinimg.com/736x/42/79/84/42798486fabb3644e5b6470a35bb8455.jpg">
 </p>
 <br>
 <br>
 
 # Objetivo 10: Programacion orientada objetos avanzados
+
 ## FASE 1: Herencia
+
+La herencia permite crear nuevas clases basadas en clases existentes.
+
+```csharp
+public class Animal
+{
+    public virtual void HacerSonido()
+    {
+        Console.WriteLine("Sonido genérico");
+    }
+}
+
+public class Perro : Animal
+{
+    public override void HacerSonido()
+    {
+        Console.WriteLine("¡Guau!");
+    }
+}
+
+```
+
 ## FASE 2: Polimorfismo
+
+El polimorfismo permite tratar objetos de diferentes clases de manera uniforme.
+
+```csharp
+Animal[] animales = new Animal[]
+{
+    new Perro(),
+    new Gato()
+};
+
+foreach (Animal animal in animales)
+{
+    animal.HacerSonido(); // Cada animal hace su sonido específico
+}
+
+```
 
 <br>
 <br>
 <p align="center">
-<img height="90px" width="100%" src="">
+<img height="90px" width="100%" src="https://i.pinimg.com/736x/a3/48/bb/a348bb4202bfce0a57963a07cb649814.jpg">
 </p>
 <br>
 <br>
 
 # Objetivo 11: Control de excepciones
+
 ## FASE 1: Controlando excepciones
 
+El manejo de excepciones permite controlar errores en tiempo de ejecución.
 
+Las funciones son bloques de código reutilizables que realizan una tarea específica.
 
+```csharp
+public static int Suma(int a, int b)
+{
+    return a + b;
+}
+
+// Uso de la función
+int resultado = Suma(5, 3);
+
+```
