@@ -1,7 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 Console.WriteLine("## CALCULADORA ##");
 Console.WriteLine("== Opciones ==");
-Console.WriteLine("\n 1. Suma \n 2. Restar \n 3. Multiplicar \n 4. Dividir");
+Console.WriteLine("\n 1. Suma \n 2. Restar \n 3. Multiplicar \n 4. Dividir \n 5. Salir");
 int r = Convert.ToInt32(Console.ReadLine());
 switch (r)
 {
@@ -16,6 +16,9 @@ switch (r)
         break;
     case 4:
         Division();
+        break;
+    case 5:
+        Console.WriteLine("> HAS SALIDO DEL PROGRAMA");
         break;
     default:
         Console.WriteLine("> NO HAS ESCRITO UNA RESPUESTA VALIDA");
