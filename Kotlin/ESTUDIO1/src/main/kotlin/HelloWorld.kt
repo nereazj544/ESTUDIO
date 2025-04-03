@@ -26,8 +26,26 @@ fun main() {
     myFloat - 4f
 
     var myBoolean = true //? Esto solo falso o verdadero
-    
 
+
+    //TODO Constantes
+    val myConst = "Mi propiedad constetante"
+//    ! ERROR myConst = "mi nueva prop";
+
+//    todo control de flujo
+
+    myInt = 40;
+    myString = "Pito";
+    if (myInt == 40 && myString == "Hola"){
+        println("El valor es 40 ")
+        println("El valor es 'Hola'")
+    }else if (myInt == 30 || myString=="Pito"){
+        println("El valor es 30")
+        println("El valor es 'Pito'")
+
+    }else{
+        println("el valor no es 40 ni 30")
+    }
 
 
 
