@@ -46,7 +46,6 @@ class Program
 
 <aside>
 C# es una excelente opción para desarrolladores que buscan un lenguaje moderno, potente y respaldado por una gran empresa como Microsoft.
-
 </aside>
 
 <br>
@@ -87,6 +86,15 @@ dotnet new web -n MiProyectoWeb
 
 ```bash
 dotnet new mvc -n MiProyectoMVC
+```
+
+### Crear clases
+```bash
+# Crear archivos para las clases
+touch Animal.cs
+touch Cuidador.cs
+touch Zoologico.cs
+
 ```
 
 ## 3. Estructura del Proyecto
