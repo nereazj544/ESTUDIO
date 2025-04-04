@@ -6,7 +6,7 @@ fun main() {
 
     // TODO Sintaxis
 
-    // ? Variables
+    // ? Variables > Son las que se pueden variar
     var myString = "Esto es una cadena de texto"
     println(myString)
     myString = "Cambio de cadena"
@@ -29,6 +29,7 @@ fun main() {
     var myBoolean = true // ? Esto solo falso o verdadero
 
     // TODO Constantes
+    //! ESTAS NO VARIAN
     val myConst = "Mi propiedad constetante"
     //    ! ERROR myConst = "mi nueva prop";
 
@@ -46,11 +47,52 @@ fun main() {
         println("el valor no es 40 ni 30")
     }
 
-//    todo lista
-    var myList = listOf<String>("nombre", "apellido"); //! Lista de tipo imutable
-    var myListMutable = mutableListOf("Escocia", "Mongolia", "Estonia");
+    // todo lista
+    val myList = listOf<String>("nombre", "apellido"); //! Lista de tipo imutable
+    val myListMutable = mutableListOf("Escocia", "Mongolia", "Estonia");
 
 
+    //TODO Sets
+    //? Los Sets no admiten duplicados
+
+    val mySet = setOf("Escocia", "Mongolia", "Estonia");
+
+
+    //    TODO MAPS
+    val myMap = mutableMapOf("Neo" to 20);
+//    myMap.put("Brayan" to 20);
+    myMap["Brayan"] = 20;
+    println(myMap["Neo"]);
+
+//    TODO BUCLES
+
+    for (value in myList) {
+        println(value)
+    }
+    var myCounter = 0
+    while (myCounter < myList.count()) {
+        println(myList[myCounter])
+        myCounter++;
+    }
+
+//    TODO Opcionales
+    var myOpcitional: String? = null
+    //Al tipo de dato hay que ponerle eso "?" pa que sepa que puede llegar a ser nulo
+        println(myOpcitional)
+    myOpcitional = "no me gusta esta mierda"
+        println(myOpcitional)
+
+//TODO INVOCACACION DE METODOS
+    myFunction()
+
+    var myClass = MyClass("Neo", 20);
+    print(myClass.age)
+
+
+    // * ======================================= *
+println("");
+println("===============");
+println("> PAGINA KOTLIN");
 
     //    TODO PAGINA KOTLIN EJ
 
@@ -75,5 +117,19 @@ fun main() {
     val shapes: MutableList<String> = mutableListOf("triangle", "square", "circle")
     println(shapes)
 // [triangle, square, circle]
+
+
+}
+
+
+//    TODO FUNCIONES
+
+fun myFunction(){
+    print("Esto es una funcion")
+}
+
+//TODO CLASS
+class MyClass(val name:String, val age: Int){
+
 
 }
