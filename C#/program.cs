@@ -1,4 +1,3 @@
-using ConsoleApp1_Practica;
 using System;
 
 
@@ -100,17 +99,44 @@ class Program
         MyMethot("c");
 
         //! Referencias a clases
+        //=========
         //ConsoleApp1_Practica.myCars cars1 = new ConsoleApp1_Practica.myCars("Maza", "RX7", ConsoleApp1_Practica.myCars.myMotor.GASOLINA, 2005);
         //List<myCars> listCars = new List<myCars>();
         //listCars.Add(cars1);
         //Console.WriteLine(listCars[0].ToString());
 
-
-        MyCar car1 = new MyCar("Mazda", "RX7", MyCar.myMotor.GASOLINA, 2005);
-        MyCar car2 = new MyCar("Mazda", "RX8", MyCar.myMotor.DIESEL, 2008);
+        /*
+        MyCar car1 = new MyCar("Mazda", "RX7",MyCar.myMotor.GASOLINA, 2005, "red");
         List<MyCar> listCars = new List<MyCar>();
+        listCars.Add(car1);
+        Console.WriteLine(listCars[0].ToString());
+        */
+        //=========
 
-        
+        /*
+        MyCar cars = new MyCar("Mazada", "RX7", MyCar.myMotor.GASOLINA, 2005, "red");
+        List<MyCar> listCar = new List<MyCar>();
+        listCar.Add(cars);
+        */
+
+        MyClassPerson classPerson = new MyClassPerson();
+        classPerson.getName = "kei";
+        Console.WriteLine("Nombre: " + classPerson.getName);
+
+
+        //! Try Catch
+        try
+        {
+            Console.WriteLine("Numero");
+            int myNum = Convert.ToInt32(Console.ReadLine());
+        }
+        catch (FormatException) {
+            Console.WriteLine("No se acepta ese formato");
+        }
+        finally
+        {
+            Console.WriteLine("Se ha cerrado el try-catch");            
+        }
 
         //! Invocar funciones
         Sumar();
@@ -200,6 +226,8 @@ class Program
 
     private static void Sumar()
     {
+        try
+        {
         Console.WriteLine("> Numero entero: ");
         int number1 = Convert.ToInt32(Console.ReadLine()); //? Lectura de un numero entero
         Console.WriteLine("> Numero decimal: ");
@@ -207,6 +235,11 @@ class Program
         int result = (int) (number1 + number2Double);
         Console.WriteLine(">Numero 1: {0}, \n > Numero 2: {1} \n> Resultado: {2}", number1, number2Double, result);
 
+        }
+        catch (FormatException)
+        {
+            Console.WriteLine("No se acepta formato");
+        }
     }
 }
 
@@ -221,15 +254,29 @@ public class MyCar
         private string myMarca;
         private string myModel;
         private int myYearOfMade;
+    private string myCarColor;
 
-        public MyCar(string myMarca, string myModel, myMotor motor, int dateMade)
+        public MyCar(string myMarca, string myModel, myMotor motor, int dateMade, string myColorCar)
         {
             if (myYearOfMade > 0)
             {
                 this.myMarca = myMarca;
                 this.myModel = myModel;
+                this.myCarColor = myColorCar;
                 this.typeMotor = motor;
                 this.myYearOfMade = dateMade;
             }
         }
     }
+
+
+public class MyClassPerson
+{
+    /*
+    private string myName;
+    public MyClassPerson(string Name) {
+        this.myName = Name;
+    }*/
+    public string getName { get; set; } 
+
+}
