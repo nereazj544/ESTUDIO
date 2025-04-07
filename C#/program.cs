@@ -28,9 +28,14 @@ class Program
         bool isTrue = true;
         bool isFalse = false;
 
+        //! Control de excepciones
+        int myAge = Convert.ToInt32(Console.ReadLine());
+        checkAge(myAge);
+
 
         //! For and For Each
         //? For Each sirve para recorrer arrays. For control de mostrar el dato
+        /*
         string [] myCharacter = {"Raian", "Aiden", "Will"};
         
         for (int i = 1; i < 3; i++)
@@ -40,7 +45,7 @@ class Program
                  Console.WriteLine("> Character {0}: {1} ", i++, chara);
             }
         }
-
+        */
         //! If Else
         int myNumber1 = 3;
         int myNumber2 = 5;
@@ -122,11 +127,8 @@ class Program
         MyCar car1 = new MyCar("Mazda", "RX7", MyCar.myMotor.GASOLINA, 2005, "red");
         List<MyCar> listCars = new List<MyCar>();
         listCars.Add(car1);
-        for (int i = 1; i < 3; i++)
-        {
-               Console.WriteLine(i++ + "- Coches: " + listCars[0].ToString());          
-        }
-
+        
+       
         MyClassPerson classPerson = new MyClassPerson();
         classPerson.getName = "kei";
         Console.WriteLine("Nombre: " + classPerson.getName);
@@ -145,8 +147,9 @@ class Program
             Console.WriteLine("Numero");
             int myNum = Convert.ToInt32(Console.ReadLine());
         }
-        catch (FormatException) {
-            Console.WriteLine("No se acepta ese formato");
+        catch (FormatException e) {
+            Console.WriteLine("No se acepta ese formato.");
+            Console.WriteLine(e.Message);
         }
         finally
         {
@@ -178,6 +181,18 @@ class Program
         catch (Exception)
         {
             Console.WriteLine("Error");
+        }
+    }
+
+    private static void checkAge(int age)
+    {
+        if(age < 18)
+        {
+            throw new AccessViolationException("No tiene acceso para el programa");
+        }
+        else
+        {
+            Console.WriteLine("Acceso permitido");
         }
     }
 
@@ -287,29 +302,41 @@ public class MyCar
         //! Tipos
         public enum myMotor
         {
-            GASOLINA, DIESEL, HIBRIDO, ELECTRONICO
-        }
-        private myMotor typeMotor;
+            GASOLINA, DIESEL, HIBRIDO, ELECTRONICO, DEFAUL
+    }
     /*
+        private myMotor typeMotor;
         private string myMarca;
         private string myModel;
         private string myCarColor;
         private int myYearOfMade;
     */
-        public MyCar(string myMarca, string myModel, myMotor motor, int dateMade, string myColorCar)
+        public MyCar(string myMarca, string myModel, myMotor typeMotor, int dateMade, string myColorCar)
         {
             if (dateMade > 0)
             {
                 myMarca = myMarca;
                 myModel = myModel;
                 myColorCar = myColorCar;
-                motor = motor;
+            typeMotor = typeMotor;
                 dateMade = dateMade;
             }
-        }
+        }   
 
-    
+    public string myMarca { get; set; }
+    public string myModel { get; set; }
+    public string myCarColor { get; set; }
+    public int myYearOfMade { get; set; } = 0;
+    public myMotor TypeMotor { get; set; } = myMotor.DEFAUL;
+
+    public override string ToString()
+    {
+        return $"Marca: {myMarca}, Modelo: {myModel}, Color: {myCarColor}, Año: {myYearOfMade}, Motor: {TypeMotor}";
     }
+
+
+
+}
 
 
 public class MyClassPerson
@@ -345,7 +372,8 @@ class Wolf: Animal
 interface MyFristInterface
 {
     void makeInterface();
-}interface MySecondInterface
+}
+interface MySecondInterface
 {
     void makeInterfaceSecon();
 }
