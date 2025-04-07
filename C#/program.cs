@@ -1,7 +1,7 @@
 using System;
 
 
-//! NOTA: ctrl + D duplica la linea, alt + flechas bajar/subir, sift + alt + flecha se crea el multi cursor
+//! NOTA: ctrl + D duplica la linea, alt + flechas bajar/subir, sift + alt + flecha se crea el multi cursor || www.w3schools.com/cs/cs_interface_multi.php
 
 
 class Program
@@ -119,6 +119,14 @@ class Program
         listCar.Add(cars);
         */
 
+        MyCar car1 = new MyCar("Mazda", "RX7", MyCar.myMotor.GASOLINA, 2005, "red");
+        List<MyCar> listCars = new List<MyCar>();
+        listCars.Add(car1);
+        for (int i = 1; i < 3; i++)
+        {
+               Console.WriteLine(i++ + "- Coches: " + listCars[0].ToString());          
+        }
+
         MyClassPerson classPerson = new MyClassPerson();
         classPerson.getName = "kei";
         Console.WriteLine("Nombre: " + classPerson.getName);
@@ -126,6 +134,10 @@ class Program
         Wolf lobo = new Wolf();
         lobo.makeSound();
         lobo.eat();
+
+        DomeClass domeClass = new DomeClass();
+        domeClass.makeInterface();
+        domeClass.makeInterfaceSecon();
 
         //! Try Catch
         try
@@ -141,10 +153,32 @@ class Program
             Console.WriteLine("Se ha cerrado el try-catch");            
         }
 
-       
-        
+
+
         //! Invocar funciones
-        Sumar();
+        //Sumar();
+
+        //! Text 
+        //? usar el System.IO;
+        try
+        {
+            if (!File.Exists("text.txt"))
+            {
+                Console.WriteLine("No se a encontrado el archivo, se procesera a crear el txt");
+                File.Create("text.txt");
+            }else if (File.Exists("text.txt"))
+            {
+                string writeText = "Hello World";
+                //File.WriteAllLines("text.txt", writeText);
+                string readText = File.ReadAllText("text.txt");
+                Console.WriteLine(readText);
+
+            }
+        }
+        catch (Exception)
+        {
+            Console.WriteLine("Error");
+        }
     }
 
     private static void MyMethot(string myString)
@@ -256,22 +290,25 @@ public class MyCar
             GASOLINA, DIESEL, HIBRIDO, ELECTRONICO
         }
         private myMotor typeMotor;
+    /*
         private string myMarca;
         private string myModel;
-        private int myYearOfMade;
         private string myCarColor;
-
+        private int myYearOfMade;
+    */
         public MyCar(string myMarca, string myModel, myMotor motor, int dateMade, string myColorCar)
         {
-            if (myYearOfMade > 0)
+            if (dateMade > 0)
             {
-                this.myMarca = myMarca;
-                this.myModel = myModel;
-                this.myCarColor = myColorCar;
-                this.typeMotor = motor;
-                this.myYearOfMade = dateMade;
+                myMarca = myMarca;
+                myModel = myModel;
+                myColorCar = myColorCar;
+                motor = motor;
+                dateMade = dateMade;
             }
         }
+
+    
     }
 
 
@@ -302,5 +339,25 @@ class Wolf: Animal
     public override void makeSound()
     {
         Console.WriteLine("Wolf: Auu");
+    }
+}
+
+interface MyFristInterface
+{
+    void makeInterface();
+}interface MySecondInterface
+{
+    void makeInterfaceSecon();
+}
+
+class DomeClass: MyFristInterface, MySecondInterface
+{
+        public void makeInterface()
+    {
+        Console.WriteLine("frist");
+    }
+    public void makeInterfaceSecon()
+    {
+        Console.WriteLine("secon");
     }
 }
