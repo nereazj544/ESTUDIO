@@ -1,7 +1,6 @@
+using ConsoleApp1_Practica;
 using System;
-using System.Globalization;
-using System.Net.NetworkInformation;
-using System.Numerics;
+
 
 //! NOTA: ctrl + D duplica la linea, alt + flechas bajar/subir, sift + alt + flecha se crea el multi cursor
 
@@ -101,15 +100,17 @@ class Program
         MyMethot("c");
 
         //! Referencias a clases
-        myCars cars = new myCars("Mazada", "RX8", myCars.myMotor.GASOLINA, 2005);
+        //ConsoleApp1_Practica.myCars cars1 = new ConsoleApp1_Practica.myCars("Maza", "RX7", ConsoleApp1_Practica.myCars.myMotor.GASOLINA, 2005);
+        //List<myCars> listCars = new List<myCars>();
+        //listCars.Add(cars1);
+        //Console.WriteLine(listCars[0].ToString());
 
-        LinkedList<myCars> listCars = new LinkedList<myCars>();
-        listCars.AddLast(cars);
 
-        foreach (var item in listCars)
-        {
-            Console.WriteLine(item);
-        }
+        MyCar car1 = new MyCar("Mazda", "RX7", MyCar.myMotor.GASOLINA, 2005);
+        MyCar car2 = new MyCar("Mazda", "RX8", MyCar.myMotor.DIESEL, 2008);
+        List<MyCar> listCars = new List<MyCar>();
+
+        
 
         //! Invocar funciones
         Sumar();
@@ -209,27 +210,26 @@ class Program
     }
 }
 
-public class myCars
+public class MyCar
 {
-    //! Tipos
-    public enum myMotor
-    {
-        GASOLINA, DIESEL, HIBRIDO, ELECTRONICO
-    }
-    private myMotor typeMotor;
-    private string myMarca;
-    private string myModel;
-    private int myYearOfMade;
-
-    public myCars(string myMarca, string myModel, myMotor motor, int dateMade)
-    {
-        if (myYearOfMade > 0)
+        //! Tipos
+        public enum myMotor
         {
-        this.myMarca = myMarca;
-        this.myModel = myModel;
-        this.typeMotor = motor;
-        this.myYearOfMade = dateMade;
+            GASOLINA, DIESEL, HIBRIDO, ELECTRONICO
+        }
+        private myMotor typeMotor;
+        private string myMarca;
+        private string myModel;
+        private int myYearOfMade;
+
+        public MyCar(string myMarca, string myModel, myMotor motor, int dateMade)
+        {
+            if (myYearOfMade > 0)
+            {
+                this.myMarca = myMarca;
+                this.myModel = myModel;
+                this.typeMotor = motor;
+                this.myYearOfMade = dateMade;
+            }
         }
     }
-   
-}
