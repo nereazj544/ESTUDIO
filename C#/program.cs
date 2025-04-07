@@ -123,6 +123,9 @@ class Program
         classPerson.getName = "kei";
         Console.WriteLine("Nombre: " + classPerson.getName);
 
+        Wolf lobo = new Wolf();
+        lobo.makeSound();
+        lobo.eat();
 
         //! Try Catch
         try
@@ -138,6 +141,8 @@ class Program
             Console.WriteLine("Se ha cerrado el try-catch");            
         }
 
+       
+        
         //! Invocar funciones
         Sumar();
     }
@@ -254,7 +259,7 @@ public class MyCar
         private string myMarca;
         private string myModel;
         private int myYearOfMade;
-    private string myCarColor;
+        private string myCarColor;
 
         public MyCar(string myMarca, string myModel, myMotor motor, int dateMade, string myColorCar)
         {
@@ -279,4 +284,23 @@ public class MyClassPerson
     }*/
     public string getName { get; set; } 
 
+}
+
+//! Polimorfismo
+//! Clase padre
+abstract class Animal{
+    public abstract void makeSound();
+    public void eat()
+    {
+        Console.WriteLine("Animal is eating");
+    }
+}
+
+//! clase lobo deriva de la clase animal
+class Wolf: Animal
+{
+    public override void makeSound()
+    {
+        Console.WriteLine("Wolf: Auu");
+    }
 }
