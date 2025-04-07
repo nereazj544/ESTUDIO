@@ -1,2 +1,3 @@
-Revisar lo de la creacion de ficheros y clases. 
-Propiedades y las clases (mequieropegaruntiro)
+- Revisar lo de la creacion de ficheros y clases. 
+- Propiedades y las clases (mequieropegaruntiro)
+- Revisar lo chugo que hay (del libro los ultimos puntos)
