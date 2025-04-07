@@ -13,7 +13,7 @@ class Program
         string name2 = " _ ";
         Console.WriteLine("Nombre: {0}", fristName); //? Muestra por pantalla el nombre (v1 de mostar datos)
         Console.WriteLine("Nombre: {0}", fristName); //? Muestra por pantalla el nombre (v2 de mostar datos)
-        
+
         //! Concatenaciones
         String text = fristName + name2;
         Console.WriteLine(text);
@@ -22,13 +22,20 @@ class Program
         string text2 = $"text test: {fristName}";
         Console.WriteLine(text2);
 
+        var myVar = "Hello World";
+        Console.WriteLine(myVar);
+        Console.WriteLine("Nuevo contendio del var");
+        myVar = Console.ReadLine();
+        Console.WriteLine(myVar);
 
 
         //! Boolean 
+
         bool isTrue = true;
         bool isFalse = false;
 
         //! Control de excepciones
+        Console.WriteLine("Tu edad:");
         int myAge = Convert.ToInt32(Console.ReadLine());
         checkAge(myAge);
 
@@ -51,9 +58,9 @@ class Program
         int myNumber2 = 5;
 
         if (myNumber1 < myNumber2) {
-            Console.WriteLine("num 1: {0} < num2: {1}", myNumber1, myNumber2) ;
-        } else if (myNumber1 == myNumber2) { 
-            Console.WriteLine("num 1: {0} == num2: {1}", myNumber1, myNumber2) ;
+            Console.WriteLine("num 1: {0} < num2: {1}", myNumber1, myNumber2);
+        } else if (myNumber1 == myNumber2) {
+            Console.WriteLine("num 1: {0} == num2: {1}", myNumber1, myNumber2);
         }
         else
         {
@@ -81,14 +88,14 @@ class Program
         //! switch +  Metodos invocacion
         Console.WriteLine("## OPCIONES ##");
         Console.WriteLine("1- List \n 2- Diccinary");
-        
+
         int resultQuestion = Convert.ToInt32(Console.ReadLine());
 
         switch (resultQuestion)
         {
             case 1:
                 Console.WriteLine("List");
-               listMethod();
+                listMethod();
                 break; //? Break rompe el switch y no ejecuta el resto de los casos
 
             case 2:
@@ -125,10 +132,15 @@ class Program
         */
 
         MyCar car1 = new MyCar("Mazda", "RX7", MyCar.myMotor.GASOLINA, 2005, "red");
-        List<MyCar> listCars = new List<MyCar>();
-        listCars.Add(car1);
-        
-       
+        List<MyCar> listCars = new List<MyCar>{car1};
+        foreach (MyCar c in listCars)
+        {
+            Console.WriteLine(c.myModel);
+        }
+
+        Dictionary<int, MyCar> myDictionary = new Dictionary<int, MyCar>();
+        myDictionary.Add(1, car1);
+
         MyClassPerson classPerson = new MyClassPerson();
         classPerson.getName = "kei";
         Console.WriteLine("Nombre: " + classPerson.getName);
@@ -334,9 +346,7 @@ public class MyCar
         return $"Marca: {myMarca}, Modelo: {myModel}, Color: {myCarColor}, Año: {myYearOfMade}, Motor: {TypeMotor}";
     }
 
-
-
-}
+    }
 
 
 public class MyClassPerson
