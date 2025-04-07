@@ -73,6 +73,7 @@ class Program
         Console.WriteLine(reslt);
 
         //Continue 
+        /*
         int myInt2 = 5;
         while (myInt2 <= 5) {
 
@@ -84,8 +85,10 @@ class Program
             }
             Console.WriteLine(myInt2);
         }
-
+        */
         //! switch +  Metodos invocacion
+        /*
+         * 
         Console.WriteLine("## OPCIONES ##");
         Console.WriteLine("1- List \n 2- Diccinary");
 
@@ -109,7 +112,7 @@ class Program
         }
 
         MyMethot("c");
-
+        */
         //! Referencias a clases
         //=========
         //ConsoleApp1_Practica.myCars cars1 = new ConsoleApp1_Practica.myCars("Maza", "RX7", ConsoleApp1_Practica.myCars.myMotor.GASOLINA, 2005);
@@ -131,15 +134,12 @@ class Program
         listCar.Add(cars);
         */
 
-        MyCar car1 = new MyCar("Mazda", "RX7", MyCar.myMotor.GASOLINA, 2005, "red");
+        MyCar car1;
+        car1 = new MyCar("Mazda", "RX8", MyCar.myMotor.GASOLINA, 2008, "red");
         List<MyCar> listCars = new List<MyCar>{car1};
-        foreach (MyCar c in listCars)
-        {
-            Console.WriteLine(c.myModel);
-        }
 
-        Dictionary<int, MyCar> myDictionary = new Dictionary<int, MyCar>();
-        myDictionary.Add(1, car1);
+        //Console.WriteLine("Marca: {0}", listCars[0].ToString());
+        Console.WriteLine("Año " + listCars[0].myYearOfMade);
 
         MyClassPerson classPerson = new MyClassPerson();
         classPerson.getName = "kei";
@@ -175,6 +175,7 @@ class Program
 
         //! Text 
         //? usar el System.IO;
+        /*
         try
         {
             if (!File.Exists("text.txt"))
@@ -194,6 +195,7 @@ class Program
         {
             Console.WriteLine("Error");
         }
+        */
     }
 
     private static void checkAge(int age)
@@ -330,7 +332,7 @@ public class MyCar
                 myMarca = myMarca;
                 myModel = myModel;
                 myColorCar = myColorCar;
-            typeMotor = typeMotor;
+                typeMotor = typeMotor;
                 dateMade = dateMade;
             }
         }   
@@ -341,10 +343,7 @@ public class MyCar
     public int myYearOfMade { get; set; } = 0;
     public myMotor TypeMotor { get; set; } = myMotor.DEFAUL;
 
-    public override string ToString()
-    {
-        return $"Marca: {myMarca}, Modelo: {myModel}, Color: {myCarColor}, Año: {myYearOfMade}, Motor: {TypeMotor}";
-    }
+   
 
     }
 
