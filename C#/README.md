@@ -1147,3 +1147,11 @@ public static int Suma(int a, int b)
 int resultado = Suma(5, 3);
 
 ```
+
+<br>
+---
+
+# Socket y Tcp
+Sockets son conexiones a muy bajo nivel
+
+Con TcpClient, es necesario instanciar un NetworkStream con el método GetStream() para poder enviar y recibir datos. Con Socket, la creación del NetworkStream debe realizarse manualmente
