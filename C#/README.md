@@ -88,6 +88,12 @@ dotnet new web -n MiProyectoWeb
 dotnet new mvc -n MiProyectoMVC
 ```
 
+### Crear una aplicacion WPF
+
+```bash
+dotnet new wpf -n NombreDeTuProyecto
+```
+
 ### Crear clases
 ```bash
 # Crear archivos para las clases
